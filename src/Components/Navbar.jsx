@@ -25,7 +25,7 @@ function Navbar() {
             px-4 py-2 md:p-0
             transition-all duration-300
             ${open ? "top-12" : "-top-96"}
-            md:top-0
+            md:top-0 md:relative top-39 z-50
           `}
         >
           <li className="flex items-center gap-1 cursor-pointer">
