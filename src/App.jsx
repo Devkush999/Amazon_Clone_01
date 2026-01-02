@@ -1,4 +1,5 @@
 import React, { Suspense } from "react";
+
 const Header = React.lazy(() => import("./Components/Header"));
 const Navbar = React.lazy(() => import("./Components/Navbar"));
 const Heros = React.lazy(() => import("./Components/Heros"));
@@ -11,35 +12,17 @@ const Footer = React.lazy(() => import("./Components/Footer"));
 
 function App() {
   return (
-    <div>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Header />
-      </Suspense>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Navbar />
-      </Suspense>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Heros />
-      </Suspense>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Product_01 />
-      </Suspense>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Product_02 />
-      </Suspense>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Product_03 />
-      </Suspense>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Product_04 />
-      </Suspense>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Product_05 />
-      </Suspense>
-      <Suspense fallback={<h1>Loading...</h1>}>
-        <Footer />
-      </Suspense>
-    </div>
+    <Suspense fallback={<h1>Loading...</h1>}>
+      <Header />
+      <Navbar />
+      <Heros />
+      <Product_01 />
+      <Product_02 />
+      <Product_03 />
+      <Product_04 />
+      <Product_05 />
+      <Footer />
+    </Suspense>
   );
 }
 
